@@ -1,6 +1,7 @@
 const path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const webpack = require('webpack')
 
 function resolve(dir) {
     return path.join(__dirname, dir)
@@ -71,7 +72,9 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(),
-        new VueLoaderPlugin()
-
+        new VueLoaderPlugin(),
+        new webpack.DefinePlugin({
+            BASE_URL: JSON.stringify('/')
+        })
     ]
 }

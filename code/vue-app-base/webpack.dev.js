@@ -16,8 +16,7 @@ module.exports = merge(commonConfig, {
 
         new HtmlWebpackPlugin({
             template: './public/index.html',
-            title: 'vue-webpack',
-            url: './'
+            title: 'vue-webpack'
         }),
     ]
 })
