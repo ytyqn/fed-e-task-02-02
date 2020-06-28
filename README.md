@@ -11,7 +11,7 @@
 - 配置插件，dist文件夹删除插件，公共脚本插件，html生成插件，js和css代码和图片文件资源压缩插件，代码混淆插件等等
 - Tree Shaking移除 JavaScript 上下文中的未引用代码
 - 开启devServer，使用HRM热更新
-- 考虑代码分割，模块合并，其他优化
+- 考虑代码分割，模块合并，去掉未使用的代码和模块等等其他优化
 
 2、Loader 和 Plugin 有哪些不同？请描述一下开发 Loader 和 Plugin 的思路。
 
