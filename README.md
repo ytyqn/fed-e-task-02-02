@@ -16,11 +16,38 @@
 2、Loader 和 Plugin 有哪些不同？请描述一下开发 Loader 和 Plugin 的思路。
 
 - Loader 和 Plugin的不同：
+
   - Loader主要用于对js，css，图片文件进行编译压缩等处理，主要是用于加载资源文件，作用在一个个文件上
   - Plugin主要是在webpack的生命周期中处理一些事，用于webpack功能上的扩展，作用于webpack上
+
 - Loader 和 Plugin 的思路描述：
+
+  - Loader用于加载文件，是一个方法，返回js的代码
+
+    - ```javascript
+      module.exports = source => {
+        // source是所有文件的信息
+        // 处理代码
+        return "[js代码]"
+      }
+      ```
+
+  - Plugin用于webpack扩展功能，是一个类class，使用webpack生命周期钩子中处理
+
+    - ```javascript
+      class [Plugin name]{
+        apply(compiler){
+        	// 使用webpack生命周期钩子中处理
+          compiler.hooks.[webpack生命周期钩子].tap([Plugin name], status => {
+              console.log(status.toJson());
+          })
+        }
+      }
+      ```
+
+    - 
 
 ### 二. 编程题
 
-- 代码：
+- 代码：./code/vue-app-base
 - 视频：
