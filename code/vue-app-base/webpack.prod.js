@@ -30,7 +30,11 @@ module.exports = merge(commonConfig, {
     optimization: {
         splitChunks: {
             chunks: 'all'
-        }
+        },
+        sideEffects: true, //没有用到的模块会被去掉
+        usedExports: true, //标记不使用的代码
+        concatenateModules: true, // 尽可能将模块合并，webpack3添加的
+        minimize: true // 去除标记的代码
     },
     plugins: [
         new MiniCssExtractPlugin(),
