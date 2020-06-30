@@ -6,7 +6,7 @@
         "serve": "webpack-dev-server --config ./webpack.dev.js",
         "dev": "webpack --config ./webpack.dev.js",
         "build": "webpack --config ./webpack.prod.js",
-        "lint": "eslint --fix --ext .js .vue src"
+        "lint": "eslint --fix --ext .js,.vue src && eslint --fix webpack.common.js webpack.dev.js webpack.prod.js"
     },
     "dependencies": {
         "core-js": "^3.6.5",
@@ -20,6 +20,12 @@
         "copy-webpack-plugin": "^6.0.2",
         "css-loader": "^3.6.0",
         "eslint": "^7.3.1",
+        "eslint-config-standard": "^14.1.1",
+        "eslint-plugin-import": "^2.22.0",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^4.2.1",
+        "eslint-plugin-standard": "^4.0.1",
+        "eslint-plugin-vue": "^6.2.2",
         "extract-text-webpack-plugin": "^3.0.2",
         "file-loader": "^6.0.0",
         "html-loader": "^1.1.0",
