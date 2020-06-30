@@ -27,27 +27,30 @@ module.exports = {
     },
     {
       test: /\.less$/,
-      use: [{
-        loader: 'style-loader' // creates style nodes from JS strings
-      }, {
-        loader: 'css-loader'
-      }, {
-        loader: 'less-loader' // compiles Less to CSS
-      }]
+      use: [
+        'style-loader', // creates style nodes from JS strings
+        'css-loader',
+        'less-loader' // compiles Less to CSS
+      ]
     },
     {
       test: /\.css$/,
-      use: [{
-        loader: 'style-loader' // creates style nodes from JS strings
-      }, {
-        loader: 'css-loader'
-      }]
+      use: [
+        'style-loader', // creates style nodes from JS strings
+        'css-loader'
+      ]
     },
     {
       test: /\.js/,
       loader: 'babel-loader',
       exclude: /node_modules/,
       include: [resolve('src'), resolve('node_modules/webpack-dev-server/client')]
+    },
+    {
+      test: /\.js/,
+      loader: 'eslint-loader',
+      exclude: /node_modules/,
+      enforce: 'pre'
     },
     {
       test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

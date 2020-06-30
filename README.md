@@ -50,4 +50,4 @@
 ### 二. 编程题
 
 - 代码：./code/vue-app-base
-- 视频：
+- 视频：http://qiniu.ytcode.cn/fed-e-task-02-02%E5%B1%8F%E5%B9%95%E5%BD%95%E5%88%B6.mov

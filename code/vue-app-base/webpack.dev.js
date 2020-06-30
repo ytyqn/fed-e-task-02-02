@@ -9,7 +9,8 @@ module.exports = merge(commonConfig, {
   mode: 'development',
   devtool: 'cheap-module-eval-source-map',
   devServer: {
-    hotOnly: true
+    hotOnly: true,
+    open: true
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
